@@ -4,6 +4,9 @@
 # OS X
 .DS_Store
 
+# Leveldb
+downloadlog
+
 # Logs
 logs
 *.log
