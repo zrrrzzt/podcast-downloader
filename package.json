@@ -10,7 +10,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec test/*.js",
-    "coverage": "istanbul cover -x 'test/*.js' _mocha -- --reporter spec --timeout 4000"
+    "coverage": "istanbul cover -x 'test/*.js' _mocha -- --reporter spec --timeout 4000",
+    "coveralls": "istanbul cover -x 'test/*.js' _mocha --report lcovonly -- --reporter spec --timeout 4000 && cat coverage/lcov.info | coveralls"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -23,6 +24,7 @@
     "url": "http://github.com/zrrrzzt/podcast-downloader/issues"
   },
   "devDependencies": {
+    "coveralls": "^2.11.2",
     "istanbul": "^0.3.5",
     "jscs": "^1.10.0",
     "mocha": "^2.1.0"
