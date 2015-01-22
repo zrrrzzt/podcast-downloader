@@ -75,4 +75,22 @@ describe('dbPut', function() {
       done();
     });
   });
+
+  it('it returns a message on success', function(done) {
+
+    var options = {
+      key: 'testKey',
+      value:'testValue'
+    };
+
+    db.put(options, function(err, data) {
+      if (err) {
+        console.error(err);
+      } else {
+        assert.equal(data.message, 'Data saved');
+      }
+      done();
+    });
+  });
+
 });
