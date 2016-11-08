@@ -25,12 +25,12 @@
   },
   "devDependencies": {
     "coveralls": "^2.11.2",
-    "istanbul": "^0.3.5",
-    "jscs": "^1.10.0",
-    "mocha": "^2.1.0"
+    "istanbul": "^0.4.5",
+    "jscs": "^3.0.7",
+    "mocha": "^3.1.2"
   },
   "dependencies": {
-    "level": "^0.18.0",
+    "level": "^1.5.0",
     "parse-rss": "^1.0.3",
     "valid-url": "^1.0.9"
   }
