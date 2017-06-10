@@ -1,10 +1,5 @@
 language: node_js
 node_js:
-- '0.10'
-script:
-- npm test
+  - "4"
 after_success:
 - npm run coveralls
-notifications:
-  slack:
-    secure: DsYSVLUq3g1J5bk8dUkmdjDMXYyIh1PI+o3TuJ933Z2U1E/q2ol/WdsucDemdZ/KwkNPXxmsSXH1feqntBVHo5OMV+WdO+HGurAIl7pB+EHJ8zEHzQwu7eaaAZfUuKe0+ONvsdNBbuz1PEjgwlEipcGttTHsrF5v7i3vXBUsz1g=

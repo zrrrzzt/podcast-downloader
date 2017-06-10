@@ -1,57 +1,53 @@
-'use strict';
+'use strict'
 
-var assert = require('assert');
-var db = require('../lib/leveldb');
+var assert = require('assert')
+var db = require('../lib/leveldb')
 
-describe('dbGet', function() {
+describe('dbGet', function () {
+  it('it requires a key', function (done) {
+    var key = false
 
-  it('it requires a key', function(done) {
-
-    var key = false;
-
-    db.get(key, function(err, data) {
-      assert.throws(function() {
-          if (err) {
-            throw err;
-          } else {
-            console.log(data);
-          }
-        }, function(err) {
-          if ((err instanceof Error) && /Missing required input: key/.test(err)) {
-            return true;
-          }
-        },
+    db.get(key, function (err, data) {
+      assert.throws(function () {
+        if (err) {
+          throw err
+        } else {
+          console.log(data)
+        }
+      }, function (err) {
+        if ((err instanceof Error) && /Missing required input: key/.test(err)) {
+          return true
+        }
+      },
         'Unexpected error'
-      );
-      done();
-    });
-  });
+      )
+      done()
+    })
+  })
 
-  it('it will return error if key not found', function(done) {
+  it('it will return error if key not found', function (done) {
+    var key = 'YabbaDabbaDooooooo'
 
-    var key = 'YabbaDabbaDooooooo';
-
-    db.get(key, function(err, data) {
+    db.get(key, function (err, data) {
       if (err) {
-        assert(err.notFound);
+        assert(err.notFound)
       } else {
-        console.log(console.log(data));
+        console.log(console.log(data))
       }
-      done();
-    });
-  });
+      done()
+    })
+  })
 
-  it('it returns value if key is found', function(done) {
+  it('it returns value if key is found', function (done) {
+    var key = 'testKey'
 
-    var key = 'testKey';
-
-    db.get(key, function(err, data) {
+    db.get(key, function (err, data) {
       if (err) {
-        console.error(err);
+        console.error(err)
       } else {
-        assert.equal(data, 'testValue');
+        assert.equal(data, 'testValue')
       }
-      done();
-    });
-  });
-});
+      done()
+    })
+  })
+})

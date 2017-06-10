@@ -1,6 +1,6 @@
 {
   "name": "podcast-downloader",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "author": {
     "name": "Geir Gåsodden",
@@ -11,10 +11,11 @@
   "scripts": {
     "test": "mocha --reporter spec test/*.js",
     "coverage": "istanbul cover -x 'test/*.js' _mocha -- --reporter spec --timeout 4000",
-    "coveralls": "istanbul cover -x 'test/*.js' _mocha --report lcovonly -- --reporter spec --timeout 4000 && cat coverage/lcov.info | coveralls"
+    "coveralls": "istanbul cover -x 'test/*.js' _mocha --report lcovonly -- --reporter spec --timeout 4000 && cat coverage/lcov.info | coveralls",
+    "standard-fix": "standard --fix"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4.8.3"
   },
   "repository": {
     "type": "git",
@@ -24,14 +25,14 @@
     "url": "http://github.com/zrrrzzt/podcast-downloader/issues"
   },
   "devDependencies": {
-    "coveralls": "^2.13.0",
-    "istanbul": "^0.4.5",
-    "jscs": "^3.0.7",
-    "mocha": "^3.1.2"
+    "coveralls": "2.13.1",
+    "istanbul": "0.4.5",
+    "mocha": "3.4.2",
+    "standard": "10.0.2"
   },
   "dependencies": {
-    "level": "^1.5.0",
-    "parse-rss": "^1.0.3",
-    "valid-url": "^1.0.9"
+    "level": "1.7.0",
+    "parse-rss": "1.0.3",
+    "valid-url": "1.0.9"
   }
 }
