@@ -28,7 +28,7 @@
     "coveralls": "3.0.0",
     "istanbul": "0.4.5",
     "mocha": "5.0.1",
-    "standard": "10.0.3"
+    "standard": "11.0.0"
   },
   "dependencies": {
     "level": "3.0.0",
